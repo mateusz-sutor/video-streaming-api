@@ -1,0 +1,10 @@
+[] each controller in different file
+[] learn drizzle orm, migrations etc.
+[] validation
+[] mappers
+[] pnpm
+[] pretier & eslint
+[] get known express middlewares
+[] fastify refactor
+[] error handling
+[] security, helmet etc. Express best practices. fastify best practices
