@@ -1,3 +1,4 @@
+import { relations } from 'drizzle-orm';
 import { integer, pgEnum, pgTable, serial, varchar } from 'drizzle-orm/pg-core';
 
 // declaring enum in database
