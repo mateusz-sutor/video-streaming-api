@@ -38,11 +38,11 @@ router.get("/:id/watch/:resolution", async (req, res) => {
    if (range) {
         const parts = range.replace(/bytes=/, "").split("-");
         const start = parseInt(parts[0], 10);
-        const end = Math.min(start + dataToRead, streamLength - 1);
+        const end = Math.min(start + streamLength, dataToRead - 1);
         const chunksize = (end-start)+1;
         const file = fs.createReadStream(videoPath, {start, end});
         const head = {
-            'Content-Range': `bytes ${start}-${end}/${streamLength}`,
+            'Content-Range': `bytes ${start}-${end}/${dataToRead}`,
             'Accept-Ranges': 'bytes',
             'Content-Length': chunksize,
             'Content-Type': 'video/mp4',
